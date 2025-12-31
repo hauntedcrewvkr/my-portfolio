@@ -1,4 +1,4 @@
-/*................................................................ Box Model */
+/*................................................................. Box Model */
 *,
 *::before,
 *::after {
@@ -11,11 +11,9 @@
   padding: 0;
 }
 
-/*........................................................... Root Structure */
+/*............................................................ Root Structure */
 html {
-  /* Prevent iOS text size adjustment after orientation change */
   -webkit-text-size-adjust: 100%;
-  /* Smooth scrolling for anchor links */
   scroll-behavior: smooth;
 }
 
@@ -25,15 +23,14 @@ body {
   width: 100%;
 }
 
-/*............................................................... Typography */
+/*................................................................ Typography */
 body {
   line-height: 1.5;
-  /* Optimization: Cleaner font rendering on Mac/iOS */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/*.................................................................... Media */
+/*..................................................................... Media */
 img,
 picture,
 video,
@@ -43,13 +40,12 @@ svg {
   max-width: 100%;
 }
 
-/*.......................................................... Form Elements */
+/*............................................................. Form Elements */
 input,
 button,
 textarea,
 select {
   font: inherit;
-  /* Note: Focus styles must be defined in components for accessibility */
   outline: none;
 }
 
@@ -57,31 +53,28 @@ button {
   background: none;
   border: none;
   cursor: pointer;
-  /* Optimization: Removes 300ms delay on mobile taps */
   touch-action: manipulation;
 }
 
-/*.................................................................... Lists */
+/*..................................................................... Lists */
 ul,
 ol {
   list-style: none;
 }
 
-/*.................................................................... Links */
+/*..................................................................... Links */
 a {
   text-decoration: none;
   color: inherit;
   cursor: pointer;
 }
 
-/*................................................... Theme Specific Resets */
-/* Dim images in dark mode to prevent eye strain */
+/*..................................................... Theme Specific Resets */
 [data-theme='dark'] img {
   filter: brightness(0.85) contrast(1.1);
   transition: filter 0.3s ease;
 }
 
-/* Bring full brightness back on hover */
 [data-theme='dark'] img:hover {
   filter: brightness(1) contrast(1);
 }

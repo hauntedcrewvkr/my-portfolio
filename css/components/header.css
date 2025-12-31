@@ -1,4 +1,4 @@
-/*....................................................... Master Container */
+/*.......................................................... Master Container */
 .site-header__container {
   height: 100%;
   display: flex;
@@ -8,7 +8,7 @@
   contain: content;
 }
 
-/*...................................................... ZONE 1: Identity */
+/*.......................................................... ZONE 1: Identity */
 .site-header__profile {
   display: flex;
   flex-direction: column;
@@ -24,13 +24,9 @@
   width: 85px;
   height: 85px;
   border-radius: 50%;
-
-  /* METALLIC GRADIENT */
   background: conic-gradient(from 45deg, var(--color-gold), #ffeebf, var(--color-gold), #9e7f40, var(--color-gold));
-
   padding: 3px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25), inset 0 2px 5px rgba(0, 0, 0, 0.3);
-
   margin-bottom: 8px;
   transform: translateZ(0);
 }
@@ -52,10 +48,6 @@
 .profile-name {
   font-size: 1.1rem;
   font-weight: 700;
-
-  /* CRITICAL FIX: */
-  /* पहले यह 'var(--text-primary)' था जो लाइट मोड में काला हो जाता था। */
-  /* अब यह 'var(--text-on-dark)' है, जो हमेशा सफेद/आइवरी रहेगा। */
   color: var(--text-on-dark);
 }
 
@@ -67,7 +59,7 @@
   letter-spacing: 1px;
 }
 
-/*..................................................... ZONE 2: Glass Nav */
+/*......................................................... ZONE 2: Glass Nav */
 .site-header__nav {
   display: flex;
   flex-direction: column;
@@ -92,10 +84,7 @@
   width: 100%;
   padding: 10px 14px;
   border-radius: var(--radius-l);
-
-  /* CRITICAL FIX: Nav links also need to stay light on the dark sidebar */
   color: rgba(255, 255, 255, 0.6);
-
   font-size: 1.1rem;
   text-decoration: none;
   transition: background var(--duration-fast), color var(--duration-fast), transform var(--duration-fast), box-shadow var(--duration-fast);
@@ -111,31 +100,23 @@
   font-weight: 500;
 }
 
-/* Hover State */
 .nav-link:hover {
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
-
-  /* Hover always turns text bright white */
   color: #ffffff;
-
   transform: translateX(6px);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Active State */
 .nav-link.active {
   background: linear-gradient(135deg, var(--color-gold), #a38241);
-  color: #1a2238; /* Navy text on Gold */
+  color: #1a2238;
   font-weight: 700;
-
-  /* Inner depth effect */
   box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.4), 0 5px 15px rgba(0, 0, 0, 0.3);
-
   text-shadow: none;
 }
 
-/*....................................................... ZONE 3: Actions */
+/*........................................................... ZONE 3: Actions */
 .nav-actions {
   flex-shrink: 0;
   width: 100%;
@@ -147,10 +128,8 @@
   border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-/*...................................................... Mobile Overrides */
-/*...................................................... Mobile Overrides */
+/*.......................................................... Mobile Overrides */
 @media screen and (max-width: 768px) {
-  /* 1. Container Fixes */
   .site-header__container {
     flex-direction: row;
     justify-content: space-between;
@@ -183,7 +162,6 @@
     display: none;
   }
 
-  /* 2. Navigation Container */
   .site-header__nav {
     flex-grow: 0;
     width: auto;
@@ -197,23 +175,18 @@
     align-items: center;
   }
 
-  /* 3. THE MORPHING NAV LINK (Magic Logic) */
   .nav-link {
-    /* Default: Icon Only (Square/Circle) */
     width: 38px;
     height: 38px;
     padding: 0;
     justify-content: center;
     border: none;
-
-    /* Smooth Animation for Width expansion */
     transition: width 0.3s var(--ease-out-expo), background 0.3s, color 0.3s;
-    overflow: hidden; /* Hide text when collapsed */
-    white-space: nowrap; /* Keep text in one line */
+    overflow: hidden;
+    white-space: nowrap;
   }
 
   .nav-link::after {
-    /* Hide text by default */
     content: attr(holder);
     display: none;
     margin-left: 8px;
@@ -221,30 +194,24 @@
     font-weight: 600;
   }
 
-  /* 4. ACTIVE STATE (Expanded Pill) */
-  /* जब JS 'active' क्लास लगाएगा, तो यह CSS ट्रिगर होगा */
   .nav-link.active {
-    width: auto; /* Auto width based on text length */
-    padding: 0 16px; /* Breathing room */
-
-    /* Style the pill */
+    width: auto;
+    padding: 0 16px;
     background: var(--color-gold);
     color: var(--color-navy);
-    border-radius: 20px; /* Capsule Shape */
+    border-radius: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   }
 
   .nav-link.active::after {
-    display: block; /* Show text */
-    animation: fadeIn 0.3s ease; /* Fade text in nicely */
+    display: block;
+    animation: fadeIn 0.3s ease;
   }
 
-  /* Disable Hover effects on mobile to prevent sticky states */
   .nav-link:hover {
     transform: none;
   }
 
-  /* 5. Actions (Hide CV, Show Theme Toggle) */
   .nav-actions {
     padding: 0;
     margin: 0;
@@ -260,8 +227,7 @@
     height: 35px;
   }
 }
-/*  */
-/* Helper Animation for Text */
+
 @keyframes fadeIn {
   from {
     opacity: 0;

@@ -1,11 +1,10 @@
 /*............................................. Font Setup: UI Sans (Primary) */
 @font-face {
   font-family: 'UI Sans';
-  /* Performance: WOFF2 is 30% smaller than WOFF, faster loading */
   src: url('../../assets/fonts/ui-bold.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
-  font-display: swap; /* Ensures text remains visible during load */
+  font-display: swap;
 }
 @font-face {
   font-family: 'UI Sans';
@@ -36,7 +35,6 @@ body {
   font-family: var(--font-primary);
   font-size: var(--u-base);
   color: var(--text-body);
-  /* Optimization: Better kerning for body text */
   font-feature-settings: 'kern' 1, 'liga' 1;
 }
 
@@ -46,15 +44,13 @@ h2,
 h3 {
   color: var(--text-primary);
   margin-bottom: 0.5em;
-  line-height: 1.1; /* Tighter line height for large text looks more premium */
-  /* Optimization: Enables high-quality kerning and ligatures */
+  line-height: 1.1;
   text-rendering: optimizeLegibility;
 }
 
 h1 {
-  /* Fluid Typography: Scales smoothly between 2rem (mobile) and 3.5rem (desktop) */
   font-size: clamp(2rem, 5vw, 3.5rem);
-  letter-spacing: -1.5px; /* Tighter tracking for "Hero" impact */
+  letter-spacing: -1.5px;
   font-weight: 800;
 }
 
@@ -68,11 +64,10 @@ h3 {
   font-weight: 700;
 }
 
-/*................................................................. Paragraphs */
+/*................................................................ Paragraphs */
 p {
   margin-bottom: 1.5rem;
-  line-height: 1.6; /* Increased slightly for better readability */
-  /* Constraint: 65 characters is the optimal line length for human eye */
+  line-height: 1.6;
   max-width: 65ch;
-  color: var(--text-muted); /* Softer contrast for long reading */
+  color: var(--text-muted);
 }

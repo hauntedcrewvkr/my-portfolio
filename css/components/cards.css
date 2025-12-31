@@ -1,4 +1,4 @@
-/*....................................................... Section Headers */
+/*........................................................... Section Headers */
 .section-header::before {
   content: attr(data-heading);
   display: block;
@@ -10,7 +10,7 @@
   text-transform: uppercase;
 }
 
-/*.......................................................... Grid Layouts */
+/*.............................................................. Grid Layouts */
 .project-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -22,23 +22,17 @@
   gap: 12px;
 }
 
-/* ==========================================================================
-   PROJECT CARDS (The Creations)
-   ========================================================================== */
+/*.:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: PROJECT CARDS */
 .project-card {
   background: var(--surface-gradient);
   padding: var(--u-space-l);
   border-radius: var(--radius-l);
-
-  /* Flexbox to push footer to bottom */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 20px;
-
   box-shadow: var(--elevation-m), var(--highlight-light), var(--highlight-shadow);
   border: 1px solid rgba(255, 255, 255, 0.05);
-
   transition: transform 0.4s var(--ease-out-expo), box-shadow 0.4s var(--ease-out-expo), border-color 0.4s;
   position: relative;
   overflow: hidden;
@@ -53,20 +47,21 @@
   z-index: 1;
 }
 
-/* Typography */
+/*................................................................ Typography */
 .project-card h3 {
   font-size: 1.1rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
   color: var(--text-primary);
 }
+
 .project-card p {
   font-size: 0.9rem;
   line-height: 1.6;
   color: var(--text-body);
 }
 
-/* --- THE TECH STACK (Mini Pills) --- */
+/*................................................................ Tech Stack */
 .tech-stack-wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -79,29 +74,23 @@
   font-size: 0.7rem;
   padding: 4px 8px;
   border-radius: 4px;
-
-  /* Light Mode Look */
   background: rgba(0, 0, 0, 0.05);
   color: var(--text-muted);
   border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-/* Dark Mode Tech Pills */
 [data-theme='dark'] .tech-pill {
   background: rgba(255, 255, 255, 0.05);
   color: var(--text-muted);
   border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-/* Hovering card makes pills pop slightly */
 .project-card:hover .tech-pill {
   color: var(--text-primary);
   border-color: var(--color-gold);
 }
 
-/* ==========================================================================
-   SKILL TAGS (The Knowledge)
-   ========================================================================== */
+/*.::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: SKILL TAGS */
 .skill-tag {
   background: var(--bg-surface);
   color: var(--text-primary);
@@ -113,18 +102,16 @@
   font-size: 0.85rem;
   border-radius: var(--radius-l);
   box-shadow: var(--elevation-m);
-
   border: 1px solid transparent;
   border-bottom: 3px solid transparent;
-
   transition: all 0.2s var(--ease-out-expo);
   cursor: default;
 }
 
-/* Mastered State */
 .skill-tag.mastered {
   border-bottom-color: var(--brand-color);
 }
+
 .skill-tag.mastered .skill-icon {
   font-size: 1.1rem;
   color: var(--brand-color);
@@ -136,29 +123,30 @@
   border-color: var(--brand-color);
 }
 
-/* Locked State */
 .skill-tag.locked {
   opacity: 0.7;
   border-bottom-color: var(--text-muted);
   color: var(--text-muted);
 }
+
 .skill-tag.locked .skill-icon {
   font-size: 1.1rem;
   color: var(--text-muted);
   filter: grayscale(1);
 }
+
 .skill-tag.locked:hover {
   opacity: 1;
   background: var(--bg-body);
   cursor: not-allowed;
 }
 
-/* Dark Mode Override for Skills */
 [data-theme='dark'] .skill-tag {
   background: var(--bg-surface);
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-bottom-width: 3px;
 }
+
 [data-theme='dark'] .skill-tag.mastered {
   border-bottom-color: var(--brand-color);
 }

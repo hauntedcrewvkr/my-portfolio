@@ -1,13 +1,7 @@
-/* ==========================================================================
-   MODULE: Projects Engine (The Creations Logic)
-   ========================================================================== */
-
-// 1. THE DATASET
 const projectData = [
   {
     title: 'Network Optimizer 4636',
     desc: 'Advanced Android system tuning module to unlock maximum throughput using hidden kernel parameters and radio config.',
-    // Array of technologies used
     stack: ['Java', 'Shell Script', 'Android SDK'],
   },
   {
@@ -22,7 +16,6 @@ const projectData = [
   },
 ];
 
-// 2. THE RENDER LOGIC
 export function initProjects() {
   const container = document.getElementById('projects-container');
   if (!container) return;
@@ -33,11 +26,8 @@ export function initProjects() {
     const li = document.createElement('li');
     li.className = 'project-card';
 
-    // --- Tech Stack Builder ---
-    // हम हर तकनीक के लिए एक छोटा <span> (Pill) बनाएंगे
     const stackHTML = project.stack.map((tech) => `<span class="tech-pill">${tech}</span>`).join('');
 
-    // HTML Structure
     li.innerHTML = `
             <div class="card-content">
                 <h3>${project.title}</h3>
@@ -51,9 +41,7 @@ export function initProjects() {
             </div>
         `;
 
-    // Animation Stagger (Waterfall Effect)
     li.style.animation = `fadeInUp 0.6s ease forwards`;
-    // Projects come slightly slower than skills
     li.style.animationDelay = `${index * 100}ms`;
     li.style.opacity = '0';
 

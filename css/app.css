@@ -1,32 +1,104 @@
-/* ==========================================================================
-   Vikram Portfolio - CSS Manifest
-   ========================================================================== */
-
-/*............................................................. Base Layer */
-/* Must load first to reset browser inconsistencies */
+/*................................................................ Base Layer */
 @import url('base/reset.css');
-
-/* Defines the design tokens (Colors, Fonts, Physics) */
 @import url('base/variables.css');
-
-/* Applies fonts and global text styles */
 @import url('base/typography.css');
-
-/* Background textures (Quantum Lattice & Noise) */
 @import url('base/patterns.css');
-
-/*........................................................... Layout Layer */
-/* The main grid structure (Desktop App / Mobile Flow) */
+/*.............................................................. Layout Layer */
 @import url('layout/grid.css');
-
-/*........................................................ Component Layer */
-/* Specific UI modules */
+/*........................................................... Component Layer */
 @import url('components/header.css');
 @import url('components/hero.css');
 @import url('components/buttons.css');
 @import url('components/cards.css');
 @import url('components/forms.css');
-
-/*........................................................... Vendor Layer */
-/* External libraries (Phosphor Icons) */
+/*.............................................................. Vendor Layer */
 @import url('vendor/phosphor.css');
+
+/*.::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: CUSTOM ICONS */
+.ph-custom {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background-color: currentColor;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+}
+/*.................................................................. VBA Icon */
+.ph-logo-vba {
+  -webkit-mask-image: url('../assets/icons/vba.svg');
+  mask-image: url('../assets/icons/vba.svg');
+}
+/*.............................................................. Tableau Icon */
+.ph-logo-tableau {
+  -webkit-mask-image: url('../assets/icons/tableau.svg');
+  mask-image: url('../assets/icons/tableau.svg');
+}
+/*.............................................................. PowerBI Icon */
+.ph-logo-powerbi {
+  -webkit-mask-image: url('../assets/icons/powerbi.svg');
+  mask-image: url('../assets/icons/powerbi.svg');
+}
+/*............................................................ MS Office Icon */
+.ph-logo-office {
+  -webkit-mask-image: url('../assets/icons/msoffice.svg');
+  mask-image: url('../assets/icons/msoffice.svg');
+}
+/*........................................................... Javascript Icon */
+.ph-logo-javascript {
+  -webkit-mask-image: url('../assets/icons/javascript.svg');
+  mask-image: url('../assets/icons/javascript.svg');
+}
+/*............................................................... Python Icon */
+.ph-logo-python {
+  -webkit-mask-image: url('../assets/icons/python.svg');
+  mask-image: url('../assets/icons/python.svg');
+}
+/*............................................................... Nodejs Icon */
+.ph-logo-nodejs {
+  -webkit-mask-image: url('../assets/icons/nodejs.svg');
+  mask-image: url('../assets/icons/nodejs.svg');
+}
+/*................................................................ HTML5 Icon */
+.ph-logo-html5 {
+  -webkit-mask-image: url('../assets/icons/html.svg');
+  mask-image: url('../assets/icons/html.svg');
+}
+/*................................................................. CSS3 Icon */
+.ph-logo-css3 {
+  -webkit-mask-image: url('../assets/icons/css.svg');
+  mask-image: url('../assets/icons/css.svg');
+}
+/*............................................................... Docker Icon */
+.ph-logo-docker {
+  -webkit-mask-image: url('../assets/icons/docker.svg');
+  mask-image: url('../assets/icons/docker.svg');
+}
+/*............................................................... GSuite Icon */
+.ph-logo-gsuite {
+  -webkit-mask-image: url('../assets/icons/gsuite.svg');
+  mask-image: url('../assets/icons/gsuite.svg');
+}
+/*................................................................ Numpy Icon */
+.ph-logo-numpy {
+  -webkit-mask-image: url('../assets/icons/numpy.svg');
+  mask-image: url('../assets/icons/numpy.svg');
+}
+/*............................................................... Pandas Icon */
+.ph-logo-pandas {
+  -webkit-mask-image: url('../assets/icons/pandas.svg');
+  mask-image: url('../assets/icons/pandas.svg');
+}
+/*................................................................. Rust Icon */
+.ph-logo-rust {
+  -webkit-mask-image: url('../assets/icons/rust.svg');
+  mask-image: url('../assets/icons/rust.svg');
+}
+/*.................................................................. SQL Icon */
+.ph-logo-sql {
+  -webkit-mask-image: url('../assets/icons/sql.svg');
+  mask-image: url('../assets/icons/sql.svg');
+}

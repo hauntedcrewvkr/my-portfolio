@@ -1,4 +1,4 @@
-/*.......................................................... Section Setup */
+/*............................................................. Section Setup */
 .section--hero {
   min-height: 80vh;
   display: flex;
@@ -7,11 +7,10 @@
   contain: layout;
 }
 
-/*............................................................... Greeting */
+/*.................................................................. Greeting */
 .greeting {
   font-family: var(--font-mono);
   color: var(--color-gold);
-  /* DEFAULT: Light background tint */
   background: rgba(197, 160, 89, 0.1);
   padding: 4px 12px;
   border-radius: var(--radius-capsule);
@@ -22,19 +21,18 @@
   border: 1px solid transparent;
 }
 
-/* DARK MODE OVERRIDE: Increase visibility */
 [data-theme='dark'] .greeting {
   background: rgba(197, 160, 89, 0.15);
   border: 1px solid rgba(197, 160, 89, 0.2);
   color: #ffdb78;
 }
 
-/*........................................................... Hero Content */
+/*.............................................................. Hero Content */
 .hero-title {
   font-size: clamp(2.5rem, 5vw, 4rem);
   line-height: 1.1;
   margin-bottom: var(--u-space-s);
-  color: var(--text-primary); /* Auto-switches */
+  color: var(--text-primary);
   font-weight: 800;
   letter-spacing: -0.02em;
 }
@@ -52,10 +50,10 @@
   line-height: 1.8;
   margin-bottom: var(--u-space-xl);
   max-width: 500px;
-  color: var(--text-body); /* Auto-switches */
+  color: var(--text-body);
 }
 
-/*........................................................... Social Links */
+/*.............................................................. Social Links */
 .social-links {
   display: flex;
   gap: var(--u-space-l);
@@ -78,7 +76,7 @@
   color: var(--color-gold);
 }
 
-/*........................................................ Stats Dashboard */
+/*........................................................... Stats Dashboard */
 .hero-stats {
   font-family: var(--font-mono);
   font-size: 0.9rem;
