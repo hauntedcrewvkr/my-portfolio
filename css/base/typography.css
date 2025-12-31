@@ -1,0 +1,78 @@
+/*............................................. Font Setup: UI Sans (Primary) */
+@font-face {
+  font-family: 'UI Sans';
+  /* Performance: WOFF2 is 30% smaller than WOFF, faster loading */
+  src: url('../../assets/fonts/ui-bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap; /* Ensures text remains visible during load */
+}
+@font-face {
+  font-family: 'UI Sans';
+  src: url('../../assets/fonts/ui-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/*.............................................. Font Setup: Code Mono (Mono) */
+@font-face {
+  font-family: 'Code Mono';
+  src: url('../../assets/fonts/code-bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Code Mono';
+  src: url('../../assets/fonts/code-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/*............................................................. Global Styles */
+body {
+  font-family: var(--font-primary);
+  font-size: var(--u-base);
+  color: var(--text-body);
+  /* Optimization: Better kerning for body text */
+  font-feature-settings: 'kern' 1, 'liga' 1;
+}
+
+/*.................................................................. Headings */
+h1,
+h2,
+h3 {
+  color: var(--text-primary);
+  margin-bottom: 0.5em;
+  line-height: 1.1; /* Tighter line height for large text looks more premium */
+  /* Optimization: Enables high-quality kerning and ligatures */
+  text-rendering: optimizeLegibility;
+}
+
+h1 {
+  /* Fluid Typography: Scales smoothly between 2rem (mobile) and 3.5rem (desktop) */
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  letter-spacing: -1.5px; /* Tighter tracking for "Hero" impact */
+  font-weight: 800;
+}
+
+h2 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  letter-spacing: -0.5px;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+/*................................................................. Paragraphs */
+p {
+  margin-bottom: 1.5rem;
+  line-height: 1.6; /* Increased slightly for better readability */
+  /* Constraint: 65 characters is the optimal line length for human eye */
+  max-width: 65ch;
+  color: var(--text-muted); /* Softer contrast for long reading */
+}

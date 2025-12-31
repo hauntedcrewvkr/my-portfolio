@@ -1,0 +1,87 @@
+/*................................................................ Box Model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*.......................................................... Margin & Padding */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*........................................................... Root Structure */
+html {
+  /* Prevent iOS text size adjustment after orientation change */
+  -webkit-text-size-adjust: 100%;
+  /* Smooth scrolling for anchor links */
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+/*............................................................... Typography */
+body {
+  line-height: 1.5;
+  /* Optimization: Cleaner font rendering on Mac/iOS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*.................................................................... Media */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*.......................................................... Form Elements */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  /* Note: Focus styles must be defined in components for accessibility */
+  outline: none;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  /* Optimization: Removes 300ms delay on mobile taps */
+  touch-action: manipulation;
+}
+
+/*.................................................................... Lists */
+ul,
+ol {
+  list-style: none;
+}
+
+/*.................................................................... Links */
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+/*................................................... Theme Specific Resets */
+/* Dim images in dark mode to prevent eye strain */
+[data-theme='dark'] img {
+  filter: brightness(0.85) contrast(1.1);
+  transition: filter 0.3s ease;
+}
+
+/* Bring full brightness back on hover */
+[data-theme='dark'] img:hover {
+  filter: brightness(1) contrast(1);
+}

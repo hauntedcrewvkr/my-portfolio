@@ -1,0 +1,103 @@
+/*.......................................................... Section Setup */
+.section--hero {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  contain: layout;
+}
+
+/*............................................................... Greeting */
+.greeting {
+  font-family: var(--font-mono);
+  color: var(--color-gold);
+  /* DEFAULT: Light background tint */
+  background: rgba(197, 160, 89, 0.1);
+  padding: 4px 12px;
+  border-radius: var(--radius-capsule);
+  align-self: flex-start;
+  margin-bottom: var(--u-space-m);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  border: 1px solid transparent;
+}
+
+/* DARK MODE OVERRIDE: Increase visibility */
+[data-theme='dark'] .greeting {
+  background: rgba(197, 160, 89, 0.15);
+  border: 1px solid rgba(197, 160, 89, 0.2);
+  color: #ffdb78;
+}
+
+/*........................................................... Hero Content */
+.hero-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.1;
+  margin-bottom: var(--u-space-s);
+  color: var(--text-primary); /* Auto-switches */
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.hero-divider {
+  width: 60px;
+  height: 4px;
+  background: var(--color-gold);
+  margin: var(--u-space-m) 0;
+  border-radius: 2px;
+}
+
+.hero-desc {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: var(--u-space-xl);
+  max-width: 500px;
+  color: var(--text-body); /* Auto-switches */
+}
+
+/*........................................................... Social Links */
+.social-links {
+  display: flex;
+  gap: var(--u-space-l);
+  margin-bottom: var(--u-space-xxl);
+}
+
+.social-link {
+  font-size: 1.5rem;
+  color: var(--text-muted);
+  transition: transform 0.2s var(--ease-out-expo), color 0.2s;
+  will-change: transform;
+}
+
+.social-link:hover {
+  color: var(--color-navy);
+  transform: translateY(-3px);
+}
+
+[data-theme='dark'] .social-link:hover {
+  color: var(--color-gold);
+}
+
+/*........................................................ Stats Dashboard */
+.hero-stats {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  border-top: 1px dashed rgba(0, 0, 0, 0.1);
+  padding-top: var(--u-space-m);
+  display: flex;
+  gap: var(--u-space-m);
+}
+
+[data-theme='dark'] .hero-stats {
+  border-top: 1px dashed rgba(255, 255, 255, 0.15);
+}
+
+.stat-item {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+.stat-separator {
+  color: var(--color-gold);
+  font-weight: 300;
+}

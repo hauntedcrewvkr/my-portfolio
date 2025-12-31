@@ -1,0 +1,31 @@
+/* ==========================================================================
+   Vikram Portfolio - CSS Manifest
+   ========================================================================== */
+
+/*............................................................. Base Layer */
+/* Must load first to reset browser inconsistencies */
+@import url('base/reset.css');
+
+/* Defines the design tokens (Colors, Fonts, Physics) */
+@import url('base/variables.css');
+
+/* Applies fonts and global text styles */
+@import url('base/typography.css');
+
+/* Background textures (Quantum Lattice & Noise) */
+@import url('base/patterns.css');
+
+/*........................................................... Layout Layer */
+/* The main grid structure (Desktop App / Mobile Flow) */
+@import url('layout/grid.css');
+
+/*........................................................ Component Layer */
+/* Specific UI modules */
+@import url('components/header.css');
+@import url('components/hero.css');
+@import url('components/buttons.css');
+@import url('components/cards.css');
+
+/*........................................................... Vendor Layer */
+/* External libraries (Phosphor Icons) */
+@import url('vendor/phosphor.css');

@@ -1,0 +1,108 @@
+:root {
+  /* =========================================
+     LIGHT MODE (Day Physics)
+     ========================================= */
+
+  /* --- Base Palette --- */
+  --color-navy: #1a2238;
+  --color-gold: #c5a059; /* Standard Gold */
+  --color-gold-text: #8a6d3b; /* Deep Gold for reading on white */
+  --color-ivory: #fffaf0;
+  --color-white: #ffffff;
+  --color-error: #dc3545;
+
+  /* --- Semantics --- */
+  --bg-body: var(--color-ivory);
+  --bg-surface: var(--color-white);
+  --text-primary: var(--color-navy);
+
+  /* High Contrast Reading Colors */
+  --text-body: #2c3344;
+  --text-muted: #58627a;
+  --text-on-dark: var(--color-ivory);
+  --border-gold: var(--color-gold);
+
+  /* --- Typography --- */
+  --font-primary: 'UI Sans', sans-serif;
+  --font-mono: 'Code Mono', monospace;
+
+  /* --- Physics: Reflection --- */
+  --surface-gradient: linear-gradient(145deg, #ffffff 0%, #f4f5f7 100%);
+  --highlight-light: inset 1px 1px 0px rgba(255, 255, 255, 1);
+  --highlight-shadow: inset -1px -1px 0px rgba(26, 34, 56, 0.08);
+
+  /* Shadows (Atmospheric Navy) */
+  --shadow-realistic: 6px 6px 12px rgba(26, 34, 56, 0.08), -6px -6px 12px rgba(255, 255, 255, 1);
+
+  --elevation-m: 0 4px 6px rgba(26, 34, 56, 0.08);
+  --elevation-l: 0 15px 35px rgba(26, 34, 56, 0.12);
+  --glow-gold: 0 0 15px rgba(197, 160, 89, 0.6);
+
+  /* --- Spacing & Config --- */
+  --u-space-s: 0.618rem;
+  --u-space-m: 1rem;
+  --u-space-l: 1.618rem;
+  --u-space-xl: 2.618rem;
+  --u-space-xxl: 4.236rem;
+
+  --radius-l: 12px;
+  --radius-capsule: 9999px;
+
+  --duration-fast: 200ms;
+  --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+
+  --z-sticky: 100;
+  --z-modal: 1000;
+}
+
+/* ==========================================================================
+   DARK MODE (Night Physics - High Contrast Edition)
+   ========================================================================== */
+[data-theme='dark'] {
+  /* 1. Backgrounds: Abyssal Depth */
+  --bg-body: #05080f; /* Deepest Void */
+  --bg-surface: #101624; /* Elevated Surface */
+
+  /* 2. Text: "Starlight" Precision */
+  --text-primary: #f0f2f5; /* 95% White (Soft on eyes) */
+  --text-body: #b0b8c4; /* Silver Gray */
+  --text-muted: #7a8599;
+  --text-on-dark: #f0f2f5;
+
+  /* 3. Gold: "Molten" Logic */
+  --color-gold: #ffdb78; /* Molten Gold */
+  --color-gold-text: #ffdb78;
+
+  --border-gold: rgba(255, 219, 120, 0.3);
+
+  /* 4. Physics: Emission (Things Glow) */
+  --surface-gradient: linear-gradient(145deg, #151b2b, #0e121a);
+
+  /* RIM LIGHTING: The key to contrast */
+  --highlight-light: inset 1px 1px 0px rgba(255, 255, 255, 0.1);
+  --highlight-shadow: inset -1px -1px 0px rgba(0, 0, 0, 0.6);
+
+  /* Shadows become "Glows" or "Deep Voids" */
+  --shadow-realistic: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.05); /* Micro-border */
+
+  --elevation-m: 0 4px 15px rgba(0, 0, 0, 0.5);
+  --elevation-l: 0 20px 40px rgba(0, 0, 0, 0.6);
+
+  --glow-gold: 0 0 20px rgba(255, 219, 120, 0.15);
+}
+
+/* ... (End of variables.css) ... */
+
+/* =========================================
+   ANIMATIONS: Keyframes
+   ========================================= */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
