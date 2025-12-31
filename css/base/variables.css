@@ -1,12 +1,8 @@
 :root {
-  /* =========================================
-     LIGHT MODE (Day Physics)
-     ========================================= */
-
   /* --- Base Palette --- */
   --color-navy: #1a2238;
-  --color-gold: #c5a059; /* Standard Gold */
-  --color-gold-text: #8a6d3b; /* Deep Gold for reading on white */
+  --color-gold: #c5a059;
+  --color-gold-text: #8a6d3b;
   --color-ivory: #fffaf0;
   --color-white: #ffffff;
   --color-error: #dc3545;
@@ -44,28 +40,19 @@
   --u-space-l: 1.618rem;
   --u-space-xl: 2.618rem;
   --u-space-xxl: 4.236rem;
-
   --radius-l: 12px;
   --radius-capsule: 9999px;
-
   --duration-fast: 200ms;
   --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
-
   --z-sticky: 100;
   --z-modal: 1000;
 }
 
-/* ==========================================================================
-   DARK MODE (Night Physics - High Contrast Edition)
-   ========================================================================== */
 [data-theme='dark'] {
-  /* 1. Backgrounds: Abyssal Depth */
-  --bg-body: #05080f; /* Deepest Void */
-  --bg-surface: #101624; /* Elevated Surface */
-
-  /* 2. Text: "Starlight" Precision */
-  --text-primary: #f0f2f5; /* 95% White (Soft on eyes) */
-  --text-body: #b0b8c4; /* Silver Gray */
+  --bg-body: #05080f;
+  --bg-surface: #101624;
+  --text-primary: #f0f2f5;
+  --text-body: #b0b8c4;
   --text-muted: #7a8599;
   --text-on-dark: #f0f2f5;
 
