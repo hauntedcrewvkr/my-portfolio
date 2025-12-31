@@ -76,13 +76,35 @@
 
         <section id="Transmission" class="section">
           <div class="section-header" data-heading="03. Start Transmission"></div>
-          <div class="project-card" style="text-align: center; padding: 40px">
-            <h3>Ready to Architect?</h3>
-            <p style="margin-bottom: 20px">Let's build something deep and meaningful.</p>
-            <a href="mailto:vikram@example.com" class="cta-download" style="display: inline-flex; width: auto; padding: 0 20px; border-radius: 20px">
-              <i class="ph ph-envelope-simple"></i>
-              <span style="margin-left: 8px; font-size: 0.8rem; font-weight: 700">Send Signal</span>
-            </a>
+
+          <div class="project-card form-wrapper">
+            <h3 style="margin-bottom: 20px">Send Encrypted Signal</h3>
+
+            <form id="contact-form" class="contact-form">
+              <input type="hidden" name="contact_number" />
+
+              <div class="form-group">
+                <label for="user_name">Identity</label>
+                <input type="text" name="user_name" id="user_name" placeholder="Name or Alias" required />
+              </div>
+
+              <div class="form-group">
+                <label for="user_email">Frequency</label>
+                <input type="email" name="user_email" id="user_email" placeholder="email@address.com" required />
+              </div>
+
+              <div class="form-group">
+                <label for="message">Data Packet</label>
+                <textarea name="message" id="message" rows="4" placeholder="Enter your message here..." required></textarea>
+              </div>
+
+              <button type="submit" class="cta-download form-submit-btn">
+                <span class="btn-text">Transmit Signal</span>
+                <i class="ph ph-paper-plane-right"></i>
+              </button>
+
+              <p id="form-status" class="form-status"></p>
+            </form>
           </div>
         </section>
       </main>

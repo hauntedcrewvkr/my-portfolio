@@ -1,10 +1,15 @@
+/* ==========================================================================
+   MODULE: Contact Engine (Google Apps Script Integration)
+   ========================================================================== */
+
 export function initContact() {
   const form = document.getElementById('contact-form');
   const btn = form.querySelector('.form-submit-btn');
   const btnText = form.querySelector('.btn-text');
   const statusMsg = document.getElementById('form-status');
 
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbwDbuhlSn9dag1gB2iEMtGm2dNwRl99cIwEpOvNp2giaomLVcOYXij2EqqYuidNWVfZjw/exec';
+  // ★★★ PASTE YOUR GOOGLE DEPLOYMENT URL HERE ★★★
+  const scriptURL = 'YOUR_GOOGLE_SCRIPT_WEB_APP_URL';
 
   if (!form) return;
 
