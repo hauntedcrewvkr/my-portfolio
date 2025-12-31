@@ -1,0 +1,6 @@
+# Local Automation Scripts
+ship_it.sh
+
+# System Files (Optional but good practice)
+.DS_Store
+Thumbs.db
